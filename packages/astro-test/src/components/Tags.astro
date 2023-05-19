@@ -1,10 +1,14 @@
 ---
-const { tags } = Astro.props;
+interface Props {
+  tags?: Array<string>;
+}
+
+const { tags = [] } = Astro.props;
 ---
 
 <div class="tags">
   {
-    tags.map((tag: string) => (
+    tags.map((tag) => (
       <p class="tag">
         <a href={`/tags/${tag}`}>{tag}</a>
       </p>

@@ -1,6 +1,22 @@
 ---
 import Tags from "../components/Tags.astro";
 import BaseLayout from "./BaseLayout.astro";
+
+interface Frontmatter {
+  title: string;
+  pubDate: string;
+  description: string;
+  author: string;
+  image: {
+    url: string;
+    alt: string;
+  };
+  tags: Array<string>;
+}
+
+interface Props {
+  frontmatter: Frontmatter;
+}
 const { frontmatter } = Astro.props;
 ---
 
