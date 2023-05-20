@@ -1,6 +1,7 @@
 ---
 import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
+import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <header>
@@ -8,4 +9,12 @@ import Navigation from "./Navigation.astro";
     <Hamburger />
     <Navigation />
   </nav>
+  <ThemeIcon />
 </header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
