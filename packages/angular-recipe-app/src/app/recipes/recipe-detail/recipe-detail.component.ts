@@ -9,8 +9,8 @@ import { RecipesService } from '../recipes.service';
   styleUrls: ['./recipe-detail.component.scss'],
 })
 export class RecipeDetailComponent implements OnInit {
-  selectedRecipe: Recipe;
-  id: number;
+  selectedRecipe?: Recipe;
+  id?: number;
 
   constructor(
     private recipesService: RecipesService,
